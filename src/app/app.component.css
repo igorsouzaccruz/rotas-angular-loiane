@@ -8,3 +8,7 @@ a{
 .active {
   color: aqua;
 }
+
+.container {
+  text-align: center;
+}

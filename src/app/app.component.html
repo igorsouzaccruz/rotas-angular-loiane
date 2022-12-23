@@ -4,8 +4,13 @@
   <span><a routerLink="/login" routerLinkActive="active">Login</a></span>
   <hr>
   <span><a routerLink="/cursos"  routerLinkActive="active">Cursos</a></span>
+  <hr>
+  <span><a [routerLink]="['/cursos',idCurso.value]"  routerLinkActive="active">Curso com Id</a></span>
 </mat-toolbar>
+
 <div class="container">
+  <p>Entre com o id do curso</p>
+  <input #idCurso>
   <router-outlet></router-outlet>
 </div>
 
