@@ -1,18 +1,18 @@
 <mat-toolbar color="primary">
   <span><a routerLink="" >Rotas Ng2</a></span>
-  <hr>
+  <p> ... </p>
   <span><a routerLinkActive="active" routerLink="/login" >Login</a></span>
-  <hr>
+  <p> ... </p>
   <span><a routerLinkActive="active" routerLink="/cursos" [queryParams]="{pagina:1}">Cursos</a></span>
-  <hr>
-  <span><a routerLinkActive="active" [routerLink]="['/cursos',idCurso.value]"  >Curso com Id</a></span>
-  <hr>
+  <!-- <hr>
+  <span><a routerLinkActive="active" [routerLink]="['/cursos',idCurso.value]"  >Curso com Id</a></span> -->
+  <p> ... </p>
   <span><a routerLinkActive="active" routerLink="/alunos" >Alunos</a></span>
 </mat-toolbar>
 
 <div class="container">
-  <p>Entre com o id do curso</p>
-  <input #idCurso>
+  <!-- <p>Entre com o id do curso</p>
+  <input #idCurso> -->
   <router-outlet></router-outlet>
 </div>
 

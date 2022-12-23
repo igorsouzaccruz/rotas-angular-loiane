@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { CursosModule } from './cursos/cursos.module';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     CursosModule,
     AlunosModule,
-   
+    NgbModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
