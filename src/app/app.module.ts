@@ -5,14 +5,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing.module';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CursosService } from './cursos/cursos.service';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
 
+// import { routing } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,10 +25,10 @@ import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-en
   ],
   imports: [
     BrowserModule,
-    routing,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    AppRoutingModule
   ],
   providers: [CursosService],
   bootstrap: [AppComponent]
