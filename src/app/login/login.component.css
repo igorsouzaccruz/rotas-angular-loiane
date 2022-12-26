@@ -1,0 +1,10 @@
+input {
+  width: 100%;
+}
+
+mat-form-field {
+  width: 60%;
+}
+h2{
+  text-align: left;
+}

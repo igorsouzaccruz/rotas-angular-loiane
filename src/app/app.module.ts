@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-// import { AlunosModule } from './alunos/alunos.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
-// import { CursosModule } from './cursos/cursos.module';
 import { HomeComponent } from './home/home.component';
+import { AuthService } from './login/auth.service';
 import { LoginComponent } from './login/login.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,12 +26,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     MatToolbarModule,
     AppRoutingModule,
-    // CursosModule,
-    // AlunosModule,
     NgbModule,
-
-  ],
-  providers: [],
+    MatFormFieldModule,
+    FormsModule,
+    MatIconModule,
+    MatInputModule,
+    MatButtonModule
+   ],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
