@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth-guard';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -33,7 +34,7 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     MatButtonModule
    ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
