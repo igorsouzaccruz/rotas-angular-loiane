@@ -1,3 +1,5 @@
+import { AlunosGuard } from './guards/alunos-guard';
+import { CursosGuard } from './guards/cursos-guard';
 import { AuthGuard } from './guards/auth-guard';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -34,7 +36,7 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     MatButtonModule
    ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, CursosGuard, AlunosGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
