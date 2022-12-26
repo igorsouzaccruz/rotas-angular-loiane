@@ -1,3 +1,4 @@
+import { AlunoDetalheResolver } from './guards/aluno-detalhe-resolver';
 import { AlunosDeactivateGuard } from './../guards/alunos-deactivate.guard';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -13,14 +14,8 @@ import { AlunosComponent } from './alunos.component';
 import { AlunosRoutingModule } from './alunos.routing.module';
 import { AlunosService } from './alunos.service';
 
-
-
 @NgModule({
-  declarations: [
-    AlunosComponent,
-    AlunoFormComponent,
-    AlunoDetalheComponent
-  ],
+  declarations: [AlunosComponent, AlunoFormComponent, AlunoDetalheComponent],
   imports: [
     CommonModule,
     AlunosRoutingModule,
@@ -28,8 +23,8 @@ import { AlunosService } from './alunos.service';
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
   ],
-  providers:[AlunosService, AlunosDeactivateGuard]
+  providers: [AlunosService, AlunosDeactivateGuard, AlunoDetalheResolver],
 })
-export class AlunosModule { }
+export class AlunosModule {}
